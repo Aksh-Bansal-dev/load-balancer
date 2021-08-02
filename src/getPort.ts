@@ -14,7 +14,7 @@ function stringToHash(str: string) {
 const getPort = (data: any, fromIp: string) => {
   console.log("[CONNECTION] " + fromIp);
   const len = data.ports.length;
-  if (data.type === "consistent-hash") {
+  if (data.type === "sticky") {
     const hash = stringToHash(fromIp);
     const num = Math.floor((hash * len) / 10000);
     // console.log(hash + " " + num);

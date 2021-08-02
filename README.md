@@ -1,5 +1,7 @@
 # Load Balancer
-A simple layer 4 load balancer with consistent-hashing support.
+A simple layer 4 load balancer with sticky-sessions support.
+
+It uses hashing for sticky sessions.
 
 ## Config file
 ```
@@ -7,7 +9,7 @@ A simple layer 4 load balancer with consistent-hashing support.
 
 {
   "lbport": "8080", // load balancer port
-  "type": "consistent-hash", // "consistent-hash" for sticky sessions or "random" (default). 
+  "type": "sticky", // "sticky" for sticky sessions or "random" (default). 
   "ports": [
     {
       "ip": "127.0.0.1",

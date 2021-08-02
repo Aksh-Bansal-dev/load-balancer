@@ -1,6 +1,6 @@
 {
   "lbport": "8080",
-  "type": "consistent-hash",
+  "type": "sticky",
   "ports": [
     {
       "ip": "127.0.0.1",
